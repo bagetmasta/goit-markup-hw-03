@@ -4,7 +4,7 @@
     --accent-color: #2196F3;
     --bcg-color: #2F303A;
     --primary-letter-spacing: 0.03em; 
-    --secondly-letter-spacing: 0.02em;
+    --secondary-letter-spacing: 0.02em;
     --hero-letter-spacing: 0.06em;
 }
 
@@ -17,7 +17,12 @@ body {
     letter-spacing: var(--primary-letter-spacing);
 }
 
+/* Почему мы не поставили вверхний маржин для hero-tittle? */
+
 .hero-tittle {
+    margin-top: 0;
+    margin-bottom: 30px;
+
     letter-spacing: var(--hero-letter-spacing);
     font-weight: 900;
     font-size: 44px;
@@ -26,8 +31,23 @@ body {
     text-transform: uppercase;
 }
 
+/* Почему для hero не ставили mb? */
+
+.hero {
+    margin-bottom: 94px;
+    padding: 200px;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .feature-list,
 .list {
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
 
@@ -43,13 +63,17 @@ body {
     line-height: 1.88;
 }
 
+/* Почему мы убираем маржины feature-tittle? Потому что сверху бекграунд? */
+
 .feature-tittle {
+    margin-top: 0px;
+    margin-bottom: 10px;
+
     font-size: 14px;              
     line-height: 1.14;
     text-transform: uppercase;
 }
 
-/* У лого нужно поменять еще одну часть */
 .logo {
     color: var(--accent-color);
     
@@ -90,6 +114,11 @@ body {
     line-height: 1.71;
 }
 
+.feature-text {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .footer-contact.list {
     font-weight: 400;
 }
@@ -99,10 +128,33 @@ address {
 }
 
 .section-tittle {
+    margin-bottom: 50px;
+
     font-size: 36px;
     line-height: 1.16;
     text-align: center;
 }
+
+.employee-img {
+    margin-bottom: 30px;
+}
+
+.employee-name {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Какая разница в моем случае кому давать mb: section-first или feature-list */
+
+.section-first {
+    margin-bottom: 94px;
+}
+
+.both-of-sections {
+    margin-bottom: 94px;
+    padding: 94px 215px;
+}
+
 
 .employee-name {
     font-weight: 500;
@@ -112,6 +164,9 @@ address {
 }
 
 .employee-text {
+    margin-top: 0;
+    margin-bottom: 0;
+
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
@@ -128,7 +183,7 @@ address {
 
 .site-nav,
 .contact-nav {
-    letter-spacing: var(--secondly-letter-spacing);
+    letter-spacing: var(--secondary-letter-spacing);
     font-weight: 500;
     line-height: 1.14;
 }
@@ -137,8 +192,14 @@ address {
     color: var(--accent-color);
 } 
 
-/* Почему кнопка не становится по центру? */
+/* Почему кнопка не становится по центру?
+Почему кнопке не ставим mb? */
 .button {
+    display: inline-block;
+    border-radius: 4px;
+    padding: 10px 32px;
+    min-width: 200px;
+
     color: #FFFFFF;
     background-color: var(--accent-color);
 
@@ -195,6 +256,9 @@ address {
 }
 
 .section-third {
+    padding: 94px 215px;
+    margin-bottom: 94px;
+
     background-color: #F5F4FA;
 }
 
@@ -210,3 +274,17 @@ address {
 цвет фона сотрудников #F5F4FA
 #FFFFFF99 60% для почты и телефона в футере
 */
+
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    outline: 2px solid red;
+}
+
+/* .page-header {
+    background-color: #ccc;
+} */
+
+/* Убрать bcg если не разберусь */
