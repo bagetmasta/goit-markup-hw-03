@@ -34,9 +34,14 @@ body {
 /* Почему для hero не ставили mb? */
 
 .hero {
-    margin-bottom: 94px;
-    padding: 200px;
+    /* margin-bottom: 94px; */
+    padding: 200px 452px;
     text-align: center;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 h2 {
@@ -84,6 +89,14 @@ h2 {
     text-decoration: none;
 }
 
+/* .container > .logo {
+    display: inline-block;
+    padding-top: 60px;
+    padding-right: 1240px;
+    padding-left: 215px;
+    margin-bottom: 20px;
+} */
+
 .accent {
     color: #000000;
 }
@@ -108,6 +121,14 @@ h2 {
 .footer-contact .contact-link {
     text-decoration: none;
 }
+
+/* .footer-contact .footer-nav-address {
+    display: inline-block;
+    padding-left: 215px;
+    margin-bottom: 9px;
+}
+
+.footer-contact */
 
 .feature-text,
 .footer-contact.list {
@@ -150,9 +171,14 @@ address {
     margin-bottom: 94px;
 }
 
+/* Убрал нижний падинг хотя сначала его ставил;
+Также убрал верхний падинг */
+
 .both-of-sections {
-    margin-bottom: 94px;
-    padding: 94px 215px;
+    padding-top: 94px;
+    padding-bottom: 94px;
+    padding-right: 215px;
+    padding-left: 215px;
 }
 
 
@@ -183,10 +209,46 @@ address {
 
 .site-nav,
 .contact-nav {
+    display: flex;
     letter-spacing: var(--secondary-letter-spacing);
     font-weight: 500;
     line-height: 1.14;
 }
+
+.site-nav .nav-link,
+.contact-nav .contact-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    outline: 1px solid red;
+}
+
+.site-nav .item + .item,
+.contact-nav .item + .item,
+.nav-link.current {
+    margin-left: 40px;
+}
+
+.header,
+.nav-header {
+    display: flex;
+}
+
+.logo,
+.accent {
+    display: flex;
+    outline: 1px solid red;
+}
+
+/* Ниже такие же варианты верхнего селектора */
+
+/* .site-nav .item:last-child {
+    margin-right: 0;
+} */
+
+/* .site-nav .item:not(:last-child) {
+    margin-right: 50px;
+} */
 
 .site-nav .nav-link.current {
     color: var(--accent-color);
@@ -194,6 +256,7 @@ address {
 
 /* Почему кнопка не становится по центру?
 Почему кнопке не ставим mb? */
+
 .button {
     display: inline-block;
     border-radius: 4px;
@@ -255,13 +318,11 @@ address {
     color: #FFFFFF;
 }
 
-.section-third {
-    padding: 94px 215px;
-    margin-bottom: 94px;
+/* Ниже убрал маржин ботом, хотя сначала его ставил */
 
+.section-third {
     background-color: #F5F4FA;
 }
-
 
 /* 
 мелкий текст #757575 
@@ -275,16 +336,3 @@ address {
 #FFFFFF99 60% для почты и телефона в футере
 */
 
-
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
-    outline: 2px solid red;
-}
-
-/* .page-header {
-    background-color: #ccc;
-} */
-
-/* Убрать bcg если не разберусь */
