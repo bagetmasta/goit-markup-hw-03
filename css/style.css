@@ -17,8 +17,6 @@ body {
     letter-spacing: var(--primary-letter-spacing);
 }
 
-/* Почему мы не поставили вверхний маржин для hero-tittle? */
-
 .hero-tittle {
     margin-top: 0;
     margin-bottom: 30px;
@@ -31,10 +29,7 @@ body {
     text-transform: uppercase;
 }
 
-/* Почему для hero не ставили mb? */
-
 .hero {
-    /* margin-bottom: 94px; */
     padding: 200px 452px;
     text-align: center;
 }
@@ -67,19 +62,30 @@ h2 {
     width: 270px;
 }
 
+.wrap-image {
+    margin-bottom: 20px;
+}
+
 .project-tittle {
+    margin-right: 24px;
+    margin-left: 24px;
+    margin-bottom: 4px;
+
     font-size: 18px;
     line-height: 2;
     letter-spacing: var(--hero-letter-spacing);
 }
 
 .project-text {
+    margin-top: 0;
+    margin-right: 24px;
+    margin-left: 24px;
+    margin-bottom: 20px;
+
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: 1.88;
 }
-
-/* Почему мы убираем маржины feature-tittle? Потому что сверху бекграунд? */
 
 .feature-tittle {
     margin-top: 0px;
@@ -100,13 +106,11 @@ h2 {
     text-decoration: none;
 }
 
-/* .container > .logo {
+.container > .logo {
     display: inline-block;
     padding-top: 60px;
-    padding-right: 1240px;
-    padding-left: 215px;
     margin-bottom: 20px;
-} */
+}
 
 /* Задал контейнеру 1170, как по макету, а не 1200 */
 
@@ -114,12 +118,16 @@ h2 {
     margin-left: auto;
     margin-right: auto;
     width: 1170px;
-    outline: 1px solid red;
 }   
 
 .page-header {
     padding-right: 215px;
     padding-left: 215px;
+    border: 1px solid #ECECEC;
+}
+
+.page-header.portfolio {
+    margin-bottom: 94px;
 }
 
 .accent {
@@ -147,13 +155,10 @@ h2 {
     text-decoration: none;
 }
 
-/* .footer-contact .footer-nav-address {
+.footer-contact {
     display: inline-block;
-    padding-left: 215px;
-    margin-bottom: 9px;
+    margin-bottom: 60px;
 }
-
-.footer-contact */
 
 .feature-text,
 .footer-contact.list {
@@ -190,20 +195,9 @@ address {
     margin-bottom: 10px;
 }
 
-/* Какая разница в моем случае кому давать mb: section-first или feature-list */
-
 .section-first {
     margin-bottom: 94px;
 }
-
-/* Убрал нижний падинг хотя сначала его ставил;
-Также убрал верхний падинг */
-
-/* .both-of-sections {
-    padding-top: 94px;
-    padding-bottom: 94px;
-} */
-
 
 .employee-name {
     font-weight: 500;
@@ -214,7 +208,7 @@ address {
 
 .employee-text {
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 30px;
 
     font-size: 16px;
     line-height: 1.18;
@@ -235,6 +229,9 @@ address {
     align-items: center;
 }
 
+.container-portfolio {
+    margin-bottom: 94px;
+}
 
 /* Может объединть вверхний и нижний селекторы? */
 
@@ -250,14 +247,13 @@ address {
     line-height: 1.14;
 }
 
+.hide {
+    display: none;
+}
+
 .site-nav {
     display: flex;
     margin-left: 93px;;
-}
-
-.site-nav .item {
-    /* margin-right: 50px; */
-    outline: 1px solid red;
 }
 
 .site-nav .item + .item {
@@ -273,7 +269,6 @@ address {
 .contact-nav {
     display: flex;
     margin-left: auto;
-    /* padding-right: 215px; */
 }
 
 .contact-nav .item + .item {
@@ -308,9 +303,6 @@ address {
     color: var(--accent-color);
 } 
 
-/* Почему кнопка не становится по центру?
-Почему кнопке не ставим mb? */
-
 .button {
     display: inline-block;
     border-radius: 4px;
@@ -333,6 +325,9 @@ address {
 }
 
 .secondary-button {
+    display: block;
+    border-radius: 4px;
+
     color: var(--primary-text-color);
     background-color: #F5F4FA;
 
@@ -342,6 +337,8 @@ address {
     line-height: 1.62;
     text-align: center;
     letter-spacing: var(--primary-letter-spacing);
+
+    cursor: pointer;
 }
 
 .currently-active {
@@ -349,11 +346,7 @@ address {
     background-color: #2196F3;
 }
 
-.secondary-button:hover {
-    color: #FFFFFF;
-    background-color: var(--accent-color);
-}
-
+.secondary-button:hover,
 .secondary-button:focus {
     color: #FFFFFF;
     background-color: var(--accent-color);
@@ -371,8 +364,6 @@ address {
 .hero-tittle {
     color: #FFFFFF;
 }
-
-/* Ниже убрал маржин ботом, хотя сначала его ставил */
 
 .section-third {
     background-color: #F5F4FA;
@@ -392,23 +383,68 @@ address {
 
 /* Ниже селекторы для Портфолио */
 
-/* .flex-container {
+.wrap-list {
     display: flex;
     flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
-} */
-
-/* .flex-element {
-    margin-right: 30px;
-    margin-bottom: 30px;  
 }
 
-.flex-element:nth-child(3n) {
+.wrap-element {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    border-bottom: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
+}
+
+.wrap-element:nth-child(3n) {
     margin-right: 0px;
 }
 
-.flex-element:nth-last-child(-n + 3) {
+.wrap-element:nth-last-child(-n + 3) {
     margin-bottom: 0;
-} */
+}
 
+.list-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 34px;
+}
+
+.list-button .item + .item {
+    margin-left: 8px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.feature-list .item {
+    width: calc((100% - 90px) / 4);
+}
+
+.feature-list .item + .item {
+    margin-left: 30px;
+}
+
+.feature-list-item {
+    width: calc((100% - 60px) /3);
+}
+
+.feature-list-item + .feature-list-item {
+    margin-left: 30px;
+}
+
+.feature-list-employee {
+    width: calc((100% - 90px) / 4);
+    background-color: #FFFFFF;
+}
+
+.feature-list-employee + .feature-list-employee {
+    margin-left: 30px;
+}
+
+.footer-contact-item:not(:last-child) {
+    margin-bottom: 9px;
+}
