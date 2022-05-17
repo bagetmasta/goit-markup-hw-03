@@ -17,6 +17,10 @@ body {
     letter-spacing: var(--primary-letter-spacing);
 }
 
+h, p {
+    margin: 0;
+}
+
 .hero-tittle {
     margin: 0 auto 30px;
 
@@ -30,7 +34,7 @@ body {
 }
 
 .hero {
-    padding: 200px;
+    padding: 200px 0px;
     text-align: center;
 }
 
@@ -68,6 +72,7 @@ h2 {
 }
 
 .project-tittle {
+    margin-bottom: 4px;
     font-size: 18px;
     line-height: 2;
     letter-spacing: var(--hero-letter-spacing);
@@ -105,8 +110,6 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Задал контейнеру 1170, как по макету, а не 1200 */
-
 .container {
     margin-left: auto;
     margin-right: auto;
@@ -116,7 +119,7 @@ h2 {
 }   
 
 .page-header {
-    border: 1px solid #ECECEC;
+    border-bottom: 1px solid #ECECEC;
 }
 
 .accent {
@@ -184,6 +187,10 @@ address {
     margin-bottom: 10px;
 }
 
+.employee-img {
+    display: block;
+}
+
 .section-first {
     padding-top: 94px;
     padding-bottom: 94px;
@@ -206,7 +213,7 @@ address {
 
 .profession-employee {
     padding-top: 30px;
-    padding-bottom: 16px;
+    padding-bottom: 30px;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -244,8 +251,9 @@ address {
     line-height: 1.14;
 }
 
-.hide {
-    display: none;
+.visually-hidden {
+    position: fixed;
+    transform: scale(0);
 }
 
 .site-nav {
