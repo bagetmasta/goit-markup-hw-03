@@ -18,13 +18,11 @@ body {
 }
 
 .hero-tittle {
-    margin-top: 0;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
 
     letter-spacing: var(--hero-letter-spacing);
     font-weight: 900;
     font-size: 44px;
-    /* max-width: 696px; */
     line-height: 1.36;
     text-align: center;
     text-transform: uppercase;
