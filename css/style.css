@@ -23,7 +23,7 @@ body {
     letter-spacing: var(--hero-letter-spacing);
     font-weight: 900;
     font-size: 44px;
-    min-width: 696px;
+    max-width: 696px;
     line-height: 1.36;
     text-align: center;
     text-transform: uppercase;
