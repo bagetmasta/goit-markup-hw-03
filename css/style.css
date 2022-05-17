@@ -24,13 +24,14 @@ body {
     letter-spacing: var(--hero-letter-spacing);
     font-weight: 900;
     font-size: 44px;
+    /* max-width: 696px; */
     line-height: 1.36;
     text-align: center;
     text-transform: uppercase;
 }
 
 .hero {
-    padding: 200px 452px;
+    padding: 200px;
     text-align: center;
 }
 
@@ -38,8 +39,6 @@ body {
 .section-third {
     padding-top: 94px;
     padding-bottom: 94px;
-    padding-right: 215px;
-    padding-left: 215px;
 }
 
 h2 {
@@ -62,15 +61,14 @@ h2 {
     width: 270px;
 }
 
-.wrap-image {
-    margin-bottom: 20px;
+.projects-description {
+    padding: 24px 24px;
+    border-bottom: 1px solid #EEEEEE;
+    border-right: 1px solid #EEEEEE;
+    border-left: 1px solid #EEEEEE;
 }
 
 .project-tittle {
-    margin-right: 24px;
-    margin-left: 24px;
-    margin-bottom: 4px;
-
     font-size: 18px;
     line-height: 2;
     letter-spacing: var(--hero-letter-spacing);
@@ -78,10 +76,7 @@ h2 {
 
 .project-text {
     margin-top: 0;
-    margin-right: 24px;
-    margin-left: 24px;
-    margin-bottom: 20px;
-
+    margin-bottom: 0px;
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: 1.88;
@@ -108,7 +103,6 @@ h2 {
 
 .container > .logo {
     display: inline-block;
-    padding-top: 60px;
     margin-bottom: 20px;
 }
 
@@ -117,17 +111,13 @@ h2 {
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 1170px;
+    width: 1200px;
+    padding-right: 15px;
+    padding-left: 15px;
 }   
 
 .page-header {
-    padding-right: 215px;
-    padding-left: 215px;
     border: 1px solid #ECECEC;
-}
-
-.page-header.portfolio {
-    margin-bottom: 94px;
 }
 
 .accent {
@@ -157,7 +147,11 @@ h2 {
 
 .footer-contact {
     display: inline-block;
-    margin-bottom: 60px;
+}
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .feature-text,
@@ -186,17 +180,14 @@ address {
     text-align: center;
 }
 
-.employee-img {
-    margin-bottom: 30px;
-}
-
 .employee-name {
     margin-top: 0;
     margin-bottom: 10px;
 }
 
 .section-first {
-    margin-bottom: 94px;
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 .employee-name {
@@ -208,11 +199,17 @@ address {
 
 .employee-text {
     margin-top: 0;
-    margin-bottom: 30px;
 
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
+}
+
+.profession-employee {
+    padding-top: 30px;
+    padding-bottom: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .site-nav .nav-link:hover, 
@@ -229,8 +226,9 @@ address {
     align-items: center;
 }
 
-.container-portfolio {
-    margin-bottom: 94px;
+.portfolio-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
 
 /* Может объединть вверхний и нижний селекторы? */
@@ -326,6 +324,7 @@ address {
 .secondary-button {
     display: block;
     border-radius: 4px;
+    padding: 6px 22px;
 
     color: var(--primary-text-color);
     background-color: #F5F4FA;
@@ -364,6 +363,10 @@ address {
     color: #FFFFFF;
 }
 
+.section-second {
+    padding-bottom: 94px;
+}
+
 .section-third {
     background-color: #F5F4FA;
 }
@@ -391,10 +394,6 @@ address {
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
-
-    border-bottom: 1px solid #EEEEEE;
-    border-right: 1px solid #EEEEEE;
-    border-left: 1px solid #EEEEEE;
 }
 
 .wrap-element:nth-child(3n) {
@@ -408,7 +407,7 @@ address {
 .list-button {
     display: flex;
     justify-content: center;
-    margin-bottom: 34px;
+    margin-bottom: 50px;
 }
 
 .list-button .item + .item {
@@ -425,13 +424,16 @@ h1 {
 
 .feature-list .item + .item,
 .feature-list-employee + .feature-list-employee,
-.feature-list-item + .feature-list-item
- {
+.feature-list-item + .feature-list-item {
     margin-left: 30px;
 }
 
 .feature-list-item {
     width: calc((100% - 60px) /3);
+}
+
+.services-img {
+    display: block;
 }
 
 .feature-list-employee {
